@@ -27,9 +27,18 @@ h1 {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-    transform: translateX(210%);
+    transform: translateX(220%);
+    transition: transforms 0.4 ease-in;
 }
 
 .box.show {
     transform: translateX(0);
+}
+
+.box:nth-last-of-type(even) {
+    transform: translateX(-220%);
+}
+
+.box h2 {
+    font-size: 45px;
 }
