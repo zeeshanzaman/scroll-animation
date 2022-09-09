@@ -31,5 +31,5 @@ h1 {
 }
 
 .box.show {
-    transform: translateX(0s);
+    transform: translateX(0);
 }
