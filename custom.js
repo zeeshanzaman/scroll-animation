@@ -1,0 +1,1 @@
+// first initializing variable and and get the class from dom
