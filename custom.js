@@ -1,23 +1,15 @@
-// first initializing variable and and get the class from dom
-const box = document.querySelectorAll('.box')
+const boxes = document.querySelectorAll('.box');
 
-// use addEventListener for create function in one line 
-// the could be any thing any(section / images/whatever)
-window.addEventListener('scroll', checkBoxes)
+window.addEventListener('scroll', checkBoxes);
 
-// function (checkBoxes)
-function checkBoxes {
-    // for actual calculation
-    // console.log(window.innerHeight / 5 * 4)
+checkBoxes()
 
-    // assign value to the triggerBottom
+function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4
 
-    // Element.getBoundingClientReact() what for
-    // methods to returns (DOMRect) object providing information about the size of an element 
-    // and its position relative to the viewport
+
     boxes.forEach(box => {
-        const boxTop = box.getBoundingClientReact().top
+        const boxTop = box.getBoundingClientRect().top
 
         if (boxTop < triggerBottom) {
             box.classList.add('show')
@@ -25,5 +17,13 @@ function checkBoxes {
             box.classList.remove('show')
         }
     })
-
 }
+
+// first initializing variable and and get the class from dom
+// use addEventListener for create function in one line 
+// the could be any thing any(section / images/whatever)
+// function (checkBoxes)
+// assign value to the triggerBottom
+// Element.getBoundingClientRect() what for
+// methods to returns (DOMRect) object providing information about the size of an element 
+// and its position relative to the viewport
